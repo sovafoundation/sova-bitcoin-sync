@@ -114,18 +114,18 @@ cargo run -- \
 
 ## Nonce & duplication safety
 
-- Only **one** in-flight tx at a time  
-- Deduplicates by BTC state `(confirmed_height, block_hash)` so the same BTC block isn’t posted twice  
-- **“Nonce too low”**: refreshes metrics and reconciles with chain state  
-- **“Already known”**: keeps polling for receipt  
+- Only **one** in-flight tx at a time
+- Deduplicates by BTC state `(confirmed_height, block_hash)` so the same BTC block isn’t posted twice
+- **“Nonce too low”**: refreshes metrics and reconciles with chain state
+- **“Already known”**: keeps polling for receipt
 
 ## Health Endpoints
 
 Served on `0.0.0.0:<health-port>`:
 
-- **GET `/live`** — liveness (process running)  
-- **GET `/ready`** — readiness (Bitcoin RPC **and** Sova RPC healthy)  
-- **GET `/health`** — detailed status & metrics (including nonces and gas telemetry)  
+- **GET `/live`** — liveness (process running)
+- **GET `/ready`** — readiness (Bitcoin RPC **and** Sova RPC healthy)
+- **GET `/health`** — detailed status & metrics (including nonces and gas telemetry)
 
 ### Example `/health` response
 
@@ -168,7 +168,7 @@ Served on `0.0.0.0:<health-port>`:
 
 This project is licensed under either of:
 
-- [MIT License](LICENSE-MIT)  
-- [Apache License, Version 2.0](LICENSE-APACHE)  
+- [MIT License](LICENSE-MIT)
+- [Apache License, Version 2.0](LICENSE-APACHE)
 
 at your option.
